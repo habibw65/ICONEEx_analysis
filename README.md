@@ -27,12 +27,12 @@ The project includes data from the following tower sites:
 ```
 iconeex_analysis/
 ├── src/
-│   ├── Clarabog/                              # Clarabog tower processing scripts
-│   ├── Lullymore/                             # Lullymore tower processing scripts
-│   ├── Gurteen/                               # Gurteen tower and analysis scripts
+│   ├── [General Analysis Scripts]/            # Main analysis and processing scripts
+│   ├── Clarabog/                              # Clarabog tower-specific processing scripts
+│   ├── Lullymore/                             # Lullymore tower-specific processing scripts
 │   ├── Biblio/                                # Bibliometric analysis scripts
 │   ├── LCoPS/                                 # Land Cover and Policy Scenario scripts
-│   └── consolidated_climatological_dataset/   # Multi-tower analysis scripts
+│   └── consolidated_climatological_dataset/   # Multi-tower analysis and ML scripts
 ├── GEMINI.md                                  # Detailed technical documentation
 └── README.md                                 # This file
 ```
@@ -40,10 +40,25 @@ iconeex_analysis/
 ## Key Scripts
 
 ### Data Processing
+- `src/process_eddy_data.py` - Main Eddy Covariance data processing script for multiple towers
 - `src/*/process_*_data.py` - Tower-specific data processing scripts
 - `src/consolidated_climatological_dataset/consolidate_data.py` - Multi-tower data consolidation
 
-### Analysis Scripts
+### General Analysis Scripts (in src/)
+- `src/analyze_correlations.py` - General correlation analysis
+- `src/analyze_satellite_data.py` - Satellite data analysis and visualization
+- `src/machine_learning_nee_model.py` - Machine Learning model for NEE prediction
+- `src/hybrid_statistical_nee_model.py` - Hybrid statistical modeling approach
+- `src/global_nee_model.py` - Global NEE modeling
+- `src/seasonal_correlation_analysis.py` - Seasonal correlation studies
+- `src/monthly_correlation_analysis.py` - Monthly correlation analysis
+- `src/biweekly_correlation_analysis.py` - Biweekly correlation analysis
+- `src/find_best_week_*.py` - Scripts to identify optimal time windows for analysis
+- `src/visualize_lrc_c_relationships.py` - Light Response Curve visualization
+- `src/leave_two_out_validation.py` - Cross-validation analysis
+- `src/merge_satellite_vis.py` - Satellite vegetation index data merging
+
+### Multi-tower Analysis Scripts
 - `src/consolidated_climatological_dataset/generate_weekly_lrcs.py` - Weekly Light Response Curve generation
 - `src/consolidated_climatological_dataset/analyze_lrc_parameter_correlations.py` - LRC parameter correlation analysis
 - `src/consolidated_climatological_dataset/train_upscaling_model.py` - Machine Learning model training

@@ -1,4 +1,4 @@
-# ICONeEx Analysis
+# ICONEEx Analysis
 
 This repository contains Python scripts for processing and analyzing Eddy Covariance data from multiple tower locations in Ireland as part of the ICONeEx (Irish Carbon Observatory - Net Ecosystem Exchange) project.
 

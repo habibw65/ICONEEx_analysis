@@ -4,7 +4,7 @@ This repository contains Python scripts for processing and analyzing Eddy Covari
 
 ## Project Overview
 
-The ICONeEx Analysis project focuses on:
+The ICONEEx Analysis project focuses on:
 - Processing Eddy Covariance flux data using the `hesseflux` Python package
 - Gap-filling and flux partitioning of Net Ecosystem Exchange (NEE) data
 - Light Response Curve (LRC) analysis and parameter extraction
